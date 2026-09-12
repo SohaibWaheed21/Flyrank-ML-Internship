@@ -1,0 +1,38 @@
+{
+  "base_rate": 0.5420666666666667,
+  "silhouette_score": 0.21185945486541005,
+  "comparison": [
+    {
+      "Model / Method": "Week-4 Baseline Rule",
+      "P@10": 0.5,
+      "P@20": 0.55,
+      "P@50": 0.46,
+      "P@100": 0.43,
+      "ROC-AUC": 0.5833087407381519
+    },
+    {
+      "Model / Method": "Logistic Regression",
+      "P@10": 0.7,
+      "P@20": 0.75,
+      "P@50": 0.8,
+      "P@100": 0.85,
+      "ROC-AUC": 0.6728179711325172
+    },
+    {
+      "Model / Method": "Random Forest (Depth=8)",
+      "P@10": 0.4,
+      "P@20": 0.4,
+      "P@50": 0.46,
+      "P@100": 0.55,
+      "ROC-AUC": 0.6789980541195787
+    },
+    {
+      "Model / Method": "Gradient Boosting",
+      "P@10": 0.7,
+      "P@20": 0.8,
+      "P@50": 0.84,
+      "P@100": 0.83,
+      "ROC-AUC": 0.6626221340715388
+    }
+  ]
+}
