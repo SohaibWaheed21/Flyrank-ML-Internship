@@ -1,0 +1,11 @@
+{
+  "task": "ML-09 Validation and Research Claim Audit",
+  "base_rate": 0.5420666666666667,
+  "random_split_rf_auc": 0.7543929395055371,
+  "grouped_split_rf_auc": 0.6789980541195787,
+  "memorization_gap_auc": 0.0753948853859584,
+  "random_split_rf_p50": 0.94,
+  "grouped_split_rf_p50": 0.46,
+  "leaky_test_auc": 1.0,
+  "leakage_status": "CLEAN"
+}
