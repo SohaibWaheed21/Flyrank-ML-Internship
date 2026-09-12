@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Intelligence & Content Refresh Optimization — Capstone Research Paper</title>
+    <style>
+        :root {
+            --primary: #1a73e8;
+            --primary-dark: #1557b0;
+            --secondary: #5f6368;
+            --bg-light: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-dark: #202124;
+            --border-color: #dadce0;
+            --success-color: #1e8e3e;
+            --warning-color: #e37400;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 2.5rem 1.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .header-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        .author-byline {
+            font-size: 1.1rem;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+
+        .paper-tag {
+            display: inline-block;
+            background-color: #e8f0fe;
+            color: var(--primary-dark);
+            padding: 0.25rem 0.75rem;
+            border-radius: 16px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(60,64,67,0.08);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--primary-dark);
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: var(--text-dark);
+            margin-top: 1.5rem;
+        }
+
+        p, li {
+            font-size: 1rem;
+            color: #3c4043;
+        }
+
+        .abstract-box {
+            background-color: #e8f0fe;
+            border-left: 4px solid var(--primary);
+            padding: 1.25rem;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background-color: #f1f3f4;
+        }
+
+        .badge-confirmed {
+            background-color: #e6f4ea;
+            color: var(--success-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-warning {
+            background-color: #fef7e0;
+            color: var(--warning-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .no-go-box {
+            background-color: #fce8e6;
+            border-left: 4px solid #d93025;
+            padding: 1rem;
+            border-radius: 4px;
+            margin: 1rem 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background-color: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <span class="paper-tag">FlyRank ML Internship Capstone • Lane 3</span>
+            <h1>Search Intelligence & Content Refresh Optimization</h1>
+            <div class="author-byline">By <strong>Sohaib Waheed</strong></div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 1. Title + Abstract -->
+        <section id="abstract">
+            <h2>1. Abstract</h2>
+            <div class="abstract-box">
+                <strong>Abstract:</strong> This study addresses the operational challenge of prioritizing content refresh backlogs across multi-client web inventories using search performance intelligence. Using 30,000 pseudonymized content items across 32 client domains from the FlyRank dataset, we evaluate whether machine learning models can systematically out-rank rule-based heuristics to predict traffic decay risk. We enforce an honest 5-fold <code>GroupKFold</code> validation split by client domain to prevent domain memorization leakage. A Random Forest model achieved a <strong>Precision@20 of 0.7500</strong> (+20.0 percentage points over the 0.5500 baseline rule) by capturing non-linear interactions between search position, click-through rate, and content staleness. These findings are operationalized as a transparent <strong>Content Action Playbook</strong> with strict pre-action human review rules for SEO decision support.
+            </div>
+        </section>
+
+        <!-- 2. Introduction / Problem -->
+        <section id="introduction">
+            <h2>2. Introduction & Problem Statement</h2>
+            <p>Enterprise search engine optimization (SEO) teams manage thousands of published URLs across diverse client portfolios without clear signals on which pages yield the highest refresh return on investment (ROI). Traditional manual refresh rules rely on arbitrary single-variable thresholds (e.g. "update all articles older than 180 days"), which fail to account for search position context, impression volume floors, or non-linear click expectations.</p>
+            <p>This research builds and validates a repeatable decision-support framework that clusters content pages into operational performance archetypes and ranks URL refresh backlogs by decay risk. The primary goal is to maximize editorial resource efficiency on unseen client domains while strictly avoiding improper automated publishing.</p>
+        </section>
+
+        <!-- 3. Data -->
+        <section id="data">
+            <h2>3. Data Overview & Public-Safe Scope</h2>
+            <p>The evaluation utilizes the FlyRank ML Internship dataset, comprising both the 30,000-row anonymized starter slice and access to the 79M-row warehouse release hosted on Hugging Face (<code>hf://datasets/FlyRank/internship-warehouse</code>).</p>
+            <ul>
+                <li><strong>Starter Slice Grain</strong>: 30,000 rows × 45 columns, covering 32 pseudonymized client domains (<code>client_id</code>). All metrics reflect trailing 90-day aggregations ending at export time.</li>
+                <li><strong>Public-Safe Integrity</strong>: No private client names, domain URLs, raw queries, or system API credentials are exposed anywhere in code or artifacts. Client and content IDs are pseudonyms used exclusively for grouping and validation splits.</li>
+                <li><strong>Features Included</strong>: Trailing 90-day search snapshot metrics (<code>log_impressions_90d</code>, <code>log_clicks_90d</code>, <code>log_sessions_90d</code>, <code>avg_position</code>, <code>ctr</code>, <code>days_since_last_update</code>, <code>content_age_days</code>, <code>word_count</code>, <code>engagement_rate</code>, <code>scroll_rate</code>).</li>
+                <li><strong>Features Excluded</strong>: <code>trend_direction</code> and <code>trend_pct</code> (excluded from feature vectors as they derive the target label <code>is_declining_label</code>). Forward 30-day performance windows were excluded to prevent temporal leakage.</li>
+            </ul>
+        </section>
+
+        <!-- 4. Methodology -->
+        <section id="methodology">
+            <h2>4. Methodology & Validation Architecture</h2>
+            <h3>4.1 Client-Grouped Validation Design (<code>GroupKFold</code>)</h3>
+            <p>Standard random 80/20 train-test splits allow pages from the same client to appear in both training and test folds. Because pages under the same client share domain authority, technical infrastructure, and baseline traffic levels, random splitting causes models to memorize client identity, artificially inflating validation scores. We enforce <strong>5-fold <code>GroupKFold</code> strictly by <code>client_id</code></strong>, holding out entire client portfolios to evaluate performance on unseen client accounts.</p>
+
+            <h3>4.2 Model Toolkit</h3>
+            <ul>
+                <li><strong>Week-4 Baseline Rule</strong>: A transparent weighted percentile score (<code>0.40 * visibility + 0.35 * staleness + 0.25 * ctr_gap</code>).</li>
+                <li><strong>Logistic Regression</strong>: Scaled linear benchmark with <code>StandardScaler</code>.</li>
+                <li><strong>Random Forest Classifier</strong>: Non-parametric tree ensemble (100 trees, max depth 8) learning non-linear threshold interactions.</li>
+                <li><strong>Gradient Boosting (GBDT)</strong>: High-capacity sequential booster benchmark.</li>
+                <li><strong>K-Means Clustering (k=4)</strong>: Normalized unsupervised clustering for Lane 3 content archetype profiling.</li>
+            </ul>
+
+            <h3>4.3 Attack-Your-Own-Model Leakage Audit</h3>
+            <p>We performed a deliberate <strong>Leakage Injection Test</strong> by adding <code>trend_pct</code> (the column used to derive the target label) into the feature set. The ROC-AUC immediately jumped from <strong>0.6094 to 0.9996</strong>, providing empirical proof of label leakage. Excluding <code>trend_pct</code> returns the model to an honest 0.6094 ROC-AUC, confirming 100% feature clean-ness.</p>
+        </section>
+
+        <!-- 5. Results -->
+        <section id="results">
+            <h2>5. Results & Model Comparison</h2>
+            <p>All models and the baseline rule were evaluated out-of-fold across 5 client holdout splits on identical ranking and classification metrics:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Model / Method</th>
+                        <th>Precision@10</th>
+                        <th>Precision@20</th>
+                        <th>Precision@50</th>
+                        <th>Precision@100</th>
+                        <th>ROC-AUC</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Week-4 Baseline Rule</strong></td>
+                        <td>0.5000</td>
+                        <td>0.5500</td>
+                        <td>0.4600</td>
+                        <td>0.4300</td>
+                        <td>0.5369</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Logistic Regression</strong></td>
+                        <td>0.7000</td>
+                        <td>0.6500</td>
+                        <td>0.6000</td>
+                        <td>0.6100</td>
+                        <td>0.5841</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Random Forest (Depth=8)</strong></td>
+                        <td><strong>0.7000</strong></td>
+                        <td><strong>0.7500</strong></td>
+                        <td><strong>0.7000</strong></td>
+                        <td><strong>0.6500</strong></td>
+                        <td><strong>0.6094</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Gradient Boosting</strong></td>
+                        <td>0.7000</td>
+                        <td>0.7000</td>
+                        <td>0.7000</td>
+                        <td>0.6600</td>
+                        <td>0.6098</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><em>Base Rate (Overall Decline Rate): <strong>0.5421</strong></em></p>
+
+            <h3>Lane 3 K-Means Content Archetypes (k=4)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cluster ID</th>
+                        <th>Archetype Name</th>
+                        <th>Count (n)</th>
+                        <th>Avg Impressions</th>
+                        <th>Avg Days Stale</th>
+                        <th>Avg Position</th>
+                        <th>Avg CTR</th>
+                        <th>Decline Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>0</td>
+                        <td>Fresh Average Performers</td>
+                        <td>15,367</td>
+                        <td>10,118.9</td>
+                        <td>14.7 d</td>
+                        <td>24.4</td>
+                        <td>0.37%</td>
+                        <td>50.0%</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>High Visibility Power Content</td>
+                        <td>5,220</td>
+                        <td>26,659.9</td>
+                        <td>20.3 d</td>
+                        <td>17.0</td>
+                        <td>0.94%</td>
+                        <td>62.7%</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Stale At-Risk Inventory</td>
+                        <td>9,170</td>
+                        <td>10,636.3</td>
+                        <td>104.8 d</td>
+                        <td>22.9</td>
+                        <td>0.38%</td>
+                        <td>61.1%</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>High CTR Niche Outliers</td>
+                        <td>243</td>
+                        <td>1,067.9</td>
+                        <td>22.6 d</td>
+                        <td>11.0</td>
+                        <td>10.14%</td>
+                        <td>47.7%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 6. Limitations -->
+        <section id="limitations">
+            <h2>6. Limitations & Honest Framing</h2>
+            <p>To maintain research integrity, we state the following boundaries:</p>
+            <ol>
+                <li><strong>Observed Cross-Sectional Patterns (No Causal Claims)</strong>: The model outputs directional decision-support probabilities. Cross-sectional data does not support causal claims that updating text will automatically restore SERP rank.</li>
+                <li><strong>Brand & Navigational SERP Noise</strong>: False positive predictions occur on high-impression brand queries where low CTR is normal (users view snippet text without clicking). Human pre-action review remains mandatory.</li>
+                <li><strong>External Search Engine Volatility</strong>: Static snapshot metrics cannot anticipate unobserved Google core algorithm updates, competitor video additions, or Google AI Overview layout changes.</li>
+            </ol>
+        </section>
+
+        <!-- 7. Ranked Recommendations -->
+        <section id="recommendations">
+            <h2>7. Ranked Recommendations (Content Action Playbook)</h2>
+            <p>Model scores are translated into four operational playbook categories for editorial execution:</p>
+            <ul>
+                <li><strong>Priority 1: Refresh & Update</strong> (<code>stale_high_visibility_decay</code>, n=6,575): Comprehensive text update, statistics refresh, and internal link reinforcement.</li>
+                <li><strong>Priority 2: Title/Meta CTR Fix</strong> (<code>underperforming_ctr_page_1</code>, n=2,694): Rewrite title tags and meta descriptions to improve search snippet CTR.</li>
+                <li><strong>Priority 3: Content Expansion</strong> (<code>striking_distance_decay</code>, n=206): Expand article word count and add internal links from top-performing pages.</li>
+                <li><strong>Priority 4: Protect & Monitor</strong> (<code>top_performer_safeguard</code>, n=20,525): Maintain current state; add to monthly monitoring queue.</li>
+            </ul>
+
+            <div class="no-go-box">
+                <strong>The NO-GO Automation List:</strong>
+                <ul>
+                    <li><strong>Never auto-rewrite and auto-publish AI text</strong> without human editor review (prevents AI hallucination & E-E-A-T penalties).</li>
+                    <li><strong>Never auto-delete or auto-301-redirect</strong> high-impression URLs based on model scores alone (protects backlink equity).</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 8. Reproducibility -->
+        <section id="reproducibility">
+            <h2>8. Reproducibility & Code Receipts</h2>
+            <p>All analysis, feature extraction, model fits, and playbook exports are completely open-source and reproducible:</p>
+            <ul>
+                <li><strong>GitHub Repository</strong>: <a href="https://github.com/SohaibWaheed21/Flyrank-ML-Internship" target="_blank">SohaibWaheed21/Flyrank-ML-Internship</a></li>
+                <li><strong>Capstone Notebook</strong>: <a href="https://github.com/SohaibWaheed21/Flyrank-ML-Internship/blob/main/work/notebooks/capstone.ipynb" target="_blank">work/notebooks/capstone.ipynb</a></li>
+                <li><strong>Action Playbook Notebook</strong>: <a href="https://github.com/SohaibWaheed21/Flyrank-ML-Internship/blob/main/work/notebooks/w07_action_playbook.ipynb" target="_blank">work/notebooks/w07_action_playbook.ipynb</a></li>
+                <li><strong>Validation Audit Notebook</strong>: <a href="https://github.com/SohaibWaheed21/Flyrank-ML-Internship/blob/main/work/notebooks/w06_validation_audit.ipynb" target="_blank">work/notebooks/w06_validation_audit.ipynb</a></li>
+                <li><strong>Random Seeds & Setup</strong>: Fixed random seeds (<code>seed=42</code>) across all scikit-learn models and GroupKFold splits.</li>
+            </ul>
+        </section>
+
+        <!-- 9. Acknowledgments & Data Credit -->
+        <section id="acknowledgments">
+            <h2>9. Acknowledgments & Data Credit</h2>
+            <p>Built on the <strong>FlyRank ML Internship dataset</strong> (<a href="https://flyrank.ai" target="_blank">https://flyrank.ai</a>).</p>
+            <p>We credit FlyRank for providing access to the pseudonymized search performance starter dataset and Hugging Face warehouse release.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Sohaib Waheed • Built on the <a href="https://flyrank.ai" target="_blank">FlyRank ML Internship dataset</a></p>
+    </footer>
+
+</body>
+</html>
