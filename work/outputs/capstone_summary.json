@@ -1,0 +1,10 @@
+{
+  "title": "Google Search Ranking & Discoverability Capstone",
+  "author": "Sohaib Waheed",
+  "lane": "Lane 3: Structured Content Archetype Clustering & Refresh Opportunity Scoring",
+  "total_rows": 30000,
+  "base_decline_rate": 0.5420666666666667,
+  "best_model_precision_at_20": 0.4,
+  "baseline_precision_at_20": 0.55,
+  "data_credit": "Built on the FlyRank ML Internship dataset (https://flyrank.ai)"
+}
